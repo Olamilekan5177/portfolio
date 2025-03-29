@@ -20,7 +20,7 @@ function DefaultNavBar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   return (
     <section className="">
-      <div className="relative w-full Mi:h-[342.6vh] ">
+      <div className="relative w-full md:h-[386.5vh] sm:h-[356vh]">
         {/* Fixed background image */}
         <img
           className="w-full h-full object-cover absolute top-0 left-0"

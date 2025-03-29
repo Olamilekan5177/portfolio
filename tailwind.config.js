@@ -8,7 +8,7 @@ export default {
         "lg-plus": "1033px", // Custom breakpoint starting at 1091px
         // "Min-md": "550px",
   
-        "Mi": "375px",
+        // "Mi": "375px",
         // "Sl": "320px",
 
       },
