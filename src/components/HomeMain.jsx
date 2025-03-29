@@ -101,7 +101,8 @@ const HomeMain = () => {
         <img src={home_main} alt="home_main" />
       </div>
 
-      <div className="bg-[#320d40c2] px-10 pt-32 h-[80rem] Min-md:h-[83rem] Sl:h-[97.5rem] La:h-[91rem] Mi:h-[94rem]  md:h-[69.5rem] text-[20px]">
+      {/* <div className="bg-[#320d40c2] px-10 pt-32 h-[80rem] Min-md:h-[83rem] Sl:h-[97.5rem] La:h-[91rem] Mi:h-[94rem]  md:h-[69.5rem] text-[20px]"> */}
+      <div className="bg-[#320d40c2] px-10 pt-32 h-[80rem] text-[20px]">
         <h1 style={{ fontSize: "2.2em" }} className="text-center">
           LET ME <span className="text-[hsl(283,91%,67%)]">INTRODUCE</span>{" "}
           MYSELF
