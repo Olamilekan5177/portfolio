@@ -81,7 +81,7 @@ const TypewriterText = () => {
 
 const HomeMain = () => {
   return (
-    <section className="absolute text-white top-0 mt-7 w-full h-screen lg:hidden">
+    <section className="absolute text-white top-0 mt-7 flex flex-col w-full h-screen  lg:hidden">
       <div className="INTRO mt-64 pl-14">
         <h1 className="font-semibold text-4xl pb-5">Hi There! 👋🏻</h1>
         <h1 className="font-semibold text-4xl">
@@ -95,14 +95,13 @@ const HomeMain = () => {
         <div className="pt-14">
           <TypewriterText />
         </div>
-      </div>
-
-      <div className="mt-5 bg-gradient-to-t from-[hsla(280,29%,8%,0.7)] to-transparent">
-        <img src={home_main} alt="home_main" />
+        <div className="mt-5 bg-gradient-to-t from-[hsla(280,29%,8%,0.7)] to-transparent">
+          <img src={home_main} alt="home_main" />
+        </div>
       </div>
 
       {/* <div className="bg-[#320d40c2] px-10 pt-32 h-[80rem] Min-md:h-[83rem] Sl:h-[97.5rem] La:h-[91rem] Mi:h-[94rem]  md:h-[69.5rem] text-[20px]"> */}
-      <div className="bg-[#320d40c2] px-10 pt-32 h-[80rem] text-[20px]">
+      <div className="bg-[#320d40c2] px-10 pt-32 pb-4 h-auto flex-1 text-[20px]">
         <h1 style={{ fontSize: "2.2em" }} className="text-center">
           LET ME <span className="text-[hsl(283,91%,67%)]">INTRODUCE</span>{" "}
           MYSELF
@@ -142,7 +141,6 @@ const HomeMain = () => {
           <img src={avatar} alt="avatar" />
         </div>
 
-        {/* Social Icons */}
         <div className="pt-6 flex flex-col justify-center text-center">
           <h1 className="font-semibold text-3xl">FIND ME ON</h1>
           <p className="text-lg pt-2">
