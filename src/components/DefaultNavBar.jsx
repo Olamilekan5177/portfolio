@@ -132,9 +132,15 @@ function DefaultNavBar() {
               </li>
               <li className="flex space-x-2">
                 <FontAwesomeIcon icon={faBlog} className="pt-1" />
-                <Link to="/blogs" onClick={toggleMenu}>
-                  Blogs
-                </Link>{" "}
+                <a
+                  href="https://dev.to/not_the_regular_freelancer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={toggleMenu}
+                  className=""
+                >
+                  <p>Blogs</p>
+                </a>
               </li>
             </ul>
           </div>
