@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import home_main from "../assets/home-main.svg";
+import First from "../assets/bainary.avif";
 import avatar from "../assets/avatar.svg";
+import Backgroundcontainer from "./Backgroundcontainer.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRedditAlien,
@@ -13,6 +15,7 @@ import {
 const texts = [
   "Software Developer",
   "Freelancer",
+  "Founder",
   "Geographer",
   "Open Source Contributor",
   "WordPress Developer",
@@ -81,34 +84,47 @@ const TypewriterText = () => {
 
 const HomeMain = () => {
   return (
-    <section className="absolute text-white top-0 mt-7 flex flex-col w-full h-screen  lg:hidden">
-      <div className="INTRO mt-64 pl-14">
-        <h1 className="font-semibold text-4xl pb-5">Hi There! 👋🏻</h1>
-        <h1 className="font-semibold text-4xl">
-          I'M
-          <span className="text-[hsl(283,91%,67%)] pl-2">
-            ADELALU <br /> WAHAB
-          </span>
-        </h1>
+    // <section className="relative text-white top-0 mt-7 flex flex-col w-full h-screen  lg:hidden">
+    <Backgroundcontainer image={First}>
+      <div className="INTRO mt-64 md:flex lg:flex md:flex-row lg:flex-row md:justify-between lg:justify-between">
+        <div className="">
+          <h1 className="font-semibold text-4xl pb-5 pl-14 text-white">
+            Hi There! 👋🏻
+          </h1>
+          <h1 className="font-semibold text-4xl pl-14 text-white">
+            I'M
+            <span className="text-[hsl(283,91%,67%)] pl-2 ">
+              ADELALU <br /> WAHAB
+            </span>
+          </h1>
 
-        {/* Typewriter Text */}
-        <div className="pt-14">
-          <TypewriterText />
+          {/* Typewriter Text */}
+          <div className="pt-14 pl-14">
+            <TypewriterText />
+          </div>
         </div>
-        <div className="mt-5 bg-gradient-to-t from-[hsla(280,29%,8%,0.7)] to-transparent">
-          <img src={home_main} alt="home_main" />
+        <div className=" sm:hidden cst:hidden md:block lg:block md:-mt-28 lg:-mt-28">
+          <img
+            src={home_main}
+            alt="home_main"
+            className=" md:h-[30rem] lg:h-[30rem] w-full"
+          />
+        </div>
+        <div className="bg-gradient-to-t from-[hsla(280,29%,8%,0.7)] to-transparent sm:block cst:block md:hidden lg:hidden">
+          <img src={home_main} alt="home_main" className="h-[30rem] w-full" />
         </div>
       </div>
 
       {/* <div className="bg-[#320d40c2] px-10 pt-32 h-[80rem] Min-md:h-[83rem] Sl:h-[97.5rem] La:h-[91rem] Mi:h-[94rem]  md:h-[69.5rem] text-[20px]"> */}
-      <div className="bg-[#320d40c2] px-10 pt-32 pb-4 h-auto flex-1 text-[20px]">
-        <h1 style={{ fontSize: "2.2em" }} className="text-center">
+      <div className="bg-[#320d40c2] px-10 pt-16 pb-16 h-auto flex-1 text-[20px] text-white">
+        <h1 style={{ fontSize: "2em" }} className="text-center ">
           LET ME <span className="text-[hsl(283,91%,67%)]">INTRODUCE</span>{" "}
           MYSELF
         </h1>
         <br />
         <br />
-        <p className="home-about-body">
+
+        <p className="home-about-body pb-7">
           I discovered my passion for programming and have been on a continuous
           journey of learning and growth ever since... 🤷‍♂️
           <br />
@@ -137,7 +153,7 @@ const HomeMain = () => {
           <span className="purple">React.js</span>
         </p>
 
-        <div className="mt-20 flex justify-center Sl:-mt-0 Sl:pt-4">
+        <div className="mt-10 flex justify-center">
           <img src={avatar} alt="avatar" />
         </div>
 
@@ -176,7 +192,7 @@ const HomeMain = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Backgroundcontainer>
   );
 };
 

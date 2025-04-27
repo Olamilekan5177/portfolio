@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Home_Bg from "../assets/home-bg.jpg";
-import First from "../assets/bainary.avif";
+// import Home_Bg from "../assets/home-bg.jpg";
+// import First from "../assets/bainary.avif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars, // Import the faBars icon
@@ -19,75 +19,69 @@ function DefaultNavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   return (
-    <section className="">
-      <div className="relative w-full md:h-[386.5vh] sm:h-[356vh]">
-        {/* Fixed background image */}
-        <img
-          className="w-full h-full object-cover absolute top-0 left-0"
-          src={First}
-          alt="First"
-        />
-        {/* Scrollable transparent image */}
-        <img
-          className="w-full h-full object-cover opacity-30 absolute"
-          src={Home_Bg}
-          alt="Home_Bg"
-        />
-      </div>
-
-      <nav className="BigscreenNav hidden lg:block">
-        <h1 className="text-[hsl(283,91%,67%)] z-50 absolute top-0 lg-plus:pl-32 mt-10 font-bold text-3xl mid-md-lg:pl-16">
-          Ad.
-        </h1>
-        <div className=" text-center mid-md-lg:ml-40 lg-plus:ml-80">
-          <ul className="absolute top-0 text-white flex row gap-20 mt-12 font-semibold ">
-            <li className="flex space-x-2">
+    <section className=" flex justify-center items-center">
+      <nav className="BigscreenNav hidden lg:block bg-[hsl(232,23%,12%)] w-full fixed z-50 mt-[4.2rem]">
+        {/* mid-md-lg:ml-40 lg-plus:ml-44 */}
+        <ul className="text-white flex lg:gap-20  my-4 font-semibold justify-center items-center -ml-1">
+          <li className="pr-14 md:pr-0">
+            <Link to="/" className="" onClick={toggleMenu}>
+              <p className="text-[hsl(283,91%,67%)] font-bold text-3xl">Ad.</p>
+            </Link>
+          </li>
+          <Link to="/" onClick={toggleMenu}>
+            <li className="flex space-x-2 mt-1 cursor-pointer">
               <FontAwesomeIcon icon={faHouse} className="pt-1" />
-              <Link to="/" className="" onClick={toggleMenu}>
-                <p>Home</p>
-              </Link>
+              <p>Home</p>
             </li>
-            <li className="flex space-x-2">
-              <FontAwesomeIcon icon={faUser} className="pt-1" />
-              <Link to="/about" className="" onClick={toggleMenu}>
-                <p>About</p>
-              </Link>
-            </li>
-            <li className="flex space-x-2">
-              <FontAwesomeIcon icon={faTv} className="pt-1" />
-              <Link to="/projects" className="" onClick={toggleMenu}>
-                <p>Projects</p>
-              </Link>
-            </li>
-            <li className="flex space-x-2">
-              <FontAwesomeIcon icon={faBookBookmark} className="pt-1" />
-              <Link to="/resume" className="" onClick={toggleMenu}>
-                <p>Resume</p>
-              </Link>
-            </li>
-            <li className="flex space-x-2">
-              <FontAwesomeIcon icon={faBlog} className="pt-1" />
-              <Link to="/blogs" className="" onClick={toggleMenu}>
-                <p>Blogs</p>
-              </Link>
-            </li>
-          </ul>
+          </Link>
 
-          <ul className="absolute top-0 flex row gap-20 mt-11 font-semibold right-0 pr-20 mid-md-lg:pr-10 lg-plus:pr-16">
-            <li className="text-white bg-[hsl(266,39%,28%)] px-6 py-2 rounded-md border border-solid border-[hsl(283,100%,69%)] ">
-              <Link
-                to="/Github"
-                className="flex space-x-2"
-                onClick={toggleMenu}
-              >
-                <FontAwesomeIcon icon={faGithub} />
-                <FontAwesomeIcon icon={faCodeCompare} />
-              </Link>
+          <Link to="/about">
+            <li className="flex space-x-2 mt-1">
+              <FontAwesomeIcon icon={faUser} className="pt-1" />
+              <p>About</p>
             </li>
-          </ul>
-        </div>
+          </Link>
+          <Link to="/projects">
+            <li className="flex space-x-2 mt-1">
+              <FontAwesomeIcon icon={faTv} className="pt-1" />
+              <p>Projects</p>
+            </li>
+          </Link>
+          <Link to="/resume">
+            <li className="flex space-x-2 mt-1">
+              <FontAwesomeIcon icon={faBookBookmark} className="pt-1" />
+              <p>Resume</p>
+            </li>
+          </Link>
+          <li className="flex space-x-2 mt-1">
+            <FontAwesomeIcon icon={faBlog} className="pt-1" />
+            <a
+              href="https://dev.to/not_the_regular_freelancer"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={toggleMenu}
+              className=""
+            >
+              <p>Blogs</p>
+            </a>
+          </li>
+
+          <li className="text-white bg-[hsl(266,39%,28%)] px-6 py-2 rounded-md border border-solid border-[hsl(283,100%,69%)] font-semibold">
+            <a
+              href="https://github.com/Olamilekan5177/portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex space-x-2"
+              onClick={toggleMenu}
+            >
+              <FontAwesomeIcon icon={faGithub} />
+              <FontAwesomeIcon icon={faCodeCompare} />
+            </a>
+          </li>
+        </ul>
       </nav>
-      <div className="motherdiv z-[9999] absolute text-white top-0 mt-7 w-full h-screen lg:hidden">
+
+      <div className="motherdiv z-[9999] absolute text-white top-0 mt-7 w-full h-screen md:block lg:hidden">
         <div className="flex fixed top-0 px-10 py-3 bg-[hsl(232,23%,12%)] w-screen justify-between">
           <h1 className="text-[hsl(283,91%,67%)] font-bold text-3xl">Ad.</h1>
           <button
