@@ -1,10 +1,6 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Outlet,
-} from "react-router-dom"; // Added Outlet import
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import DefaultNavBar from "./components/DefaultNavBar";
 import FooterMain from "./components/FooterMain.jsx";
 import Home from "./components/HomeMain.jsx";
