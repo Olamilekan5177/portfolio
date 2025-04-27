@@ -165,30 +165,57 @@ const HomeMain = () => {
             me
           </p>
           <div className="flex space-x-5 justify-center pt-8">
-            <div className="w-10 h-10 bg-white relative flex justify-center items-center rounded-3xl">
-              <FontAwesomeIcon
-                icon={faRedditAlien}
-                className="absolute text-[hsl(283,91%,67%)]"
-              />
-            </div>
-            <div className="w-10 h-10 bg-white relative flex justify-center items-center rounded-3xl">
-              <FontAwesomeIcon
-                icon={faXTwitter}
-                className="absolute text-[hsl(283,91%,67%)]"
-              />
-            </div>
-            <div className="w-10 h-10 bg-white relative flex justify-center items-center rounded-3xl">
-              <FontAwesomeIcon
-                icon={faLinkedinIn}
-                className="absolute text-[hsl(283,91%,67%)]"
-              />
-            </div>
-            <div className="w-10 h-10 bg-white relative flex justify-center items-center rounded-3xl">
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="absolute text-[hsl(283,91%,67%)]"
-              />
-            </div>
+            <a
+              href="https://www.reddit.com/user/khalidmain0/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-10 h-10 bg-white relative flex justify-center items-center rounded-3xl">
+                <FontAwesomeIcon
+                  icon={faRedditAlien}
+                  className="absolute text-[hsl(283,91%,67%)]"
+                />
+              </div>
+            </a>
+
+            <a
+              href="https://x.com/devadeola?s=21"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-10 h-10 bg-white relative flex justify-center items-center rounded-3xl">
+                <FontAwesomeIcon
+                  icon={faXTwitter}
+                  className="absolute text-[hsl(283,91%,67%)]"
+                />
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/wahab-adelalu-201595285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-10 h-10 bg-white relative flex justify-center items-center rounded-3xl">
+                <FontAwesomeIcon
+                  icon={faLinkedinIn}
+                  className="absolute text-[hsl(283,91%,67%)]"
+                />
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/invites/contact/?igsh=2su3vtkese3p&utm_content=38fyopp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-10 h-10 bg-white relative flex justify-center items-center rounded-3xl">
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="absolute text-[hsl(283,91%,67%)]"
+                />
+              </div>
+            </a>
           </div>
         </div>
       </div>
